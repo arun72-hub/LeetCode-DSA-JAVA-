@@ -1,0 +1,97 @@
+# ==============================
+# Python
+# ==============================
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+
+# ==============================
+# Java
+# ==============================
+
+# Compiled Java files
+*.class
+
+# Java build directories
+target/
+out/
+build/
+
+# Java archives
+*.jar
+*.war
+*.ear
+
+# Java IDE files
+*.iml
+
+
+# ==============================
+# C / C++
+# ==============================
+
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+
+# Static and shared libraries
+*.a
+*.so
+*.dll
+
+# Debug files
+*.dSYM/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+
+# ==============================
+# IDE / Editors
+# ==============================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+
+# ==============================
+# Operating System
+# ==============================
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+
+# ==============================
+# Logs / Temporary Files
+# ==============================
+
+*.log
+*.tmp
+*.temp
