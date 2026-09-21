@@ -1,7 +1,10 @@
+import java.util.Scanner;
+
 public class MedianTSA {
 
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
+        // Binary search smaller array
         if (nums1.length > nums2.length) {
             return findMedianSortedArrays(nums2, nums1);
         }
@@ -33,12 +36,15 @@ public class MedianTSA {
                     ? Integer.MAX_VALUE
                     : nums2[partition2];
 
+            // Correct partition
             if (left1 <= right2 && left2 <= right1) {
 
+                // Odd number of elements
                 if ((m + n) % 2 == 1) {
                     return Math.max(left1, left2);
                 }
 
+                // Even number of elements
                 int leftMax = Math.max(left1, left2);
                 int rightMin = Math.min(right1, right2);
 
@@ -59,11 +65,35 @@ public class MedianTSA {
 
     public static void main(String[] args) {
 
-        int[] nums1 = {1, 2};
-        int[] nums2 = {3, 4};
+        Scanner sc = new Scanner(System.in);
 
+        // First array
+        System.out.print("Enter size of first array: ");
+        int m = sc.nextInt();
+
+        int[] nums1 = new int[m];
+
+        System.out.println("Enter " + m + " sorted elements:");
+        for (int i = 0; i < m; i++) {
+            nums1[i] = sc.nextInt();
+        }
+
+        // Second array
+        System.out.print("Enter size of second array: ");
+        int n = sc.nextInt();
+
+        int[] nums2 = new int[n];
+
+        System.out.println("Enter " + n + " sorted elements:");
+        for (int i = 0; i < n; i++) {
+            nums2[i] = sc.nextInt();
+        }
+
+        // Calculate median
         double result = findMedianSortedArrays(nums1, nums2);
 
         System.out.println("Median = " + result);
+
+        sc.close();
     }
 }
